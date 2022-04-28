@@ -7,3 +7,7 @@ const areaValue = (baseValue * heightValue) / 2;
 console.log(
 `The area of the triangle is ${areaValue}`
 );
+
+console.log(
+    `The area of the triangle is ${areaValue}`
+    );
