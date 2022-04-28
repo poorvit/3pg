@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script src="./day1.js"></script>
+</head>
+<body>
+    <p id="text">Hello World!</p>
+    <button id="my button">Change text</button>
+    <p id="second">Javasripts is.............</p>
+    <button id="second button">Second button</button>
+    <p id="empty"></p>
+    <button id="hi">click me</button>
+    <!-- INLINE JAVASCRIPT -->
+    <!-- <button onclick="alert('hi! poorvi')" >click Me</button> -->
+    <script type="text/javascript">
+        // alert("page is loaded");
+        document.getElementById("text").innerHTML = "Hello Rob!";
+        document.getElementById("my button").onclick=function() {
+            document.getElementById("text").innerHTML="HI good morning!"
+        }
+        document.getElementById("second button").onclick=function() {
+            document.getElementById("second").innerHTML= "I think "+document.getElementById("second").innerHTML+" great !"
+        }
+        document.getElementById("hi").onclick=function() {
+            document.getElementById("empty").innerHTML="<h1>it's me</h1>"
+        }
+    </script>
+    
+</body>
+</html>

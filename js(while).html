@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>while loop</title>
+</head>
+
+<body>
+    <div id="tweets"></div>
+    <script type="text/javascript">
+        var tweetstring = "";
+        var tweets = ["good evening", "Aloha", "Mi amor", "Adena"];
+        var i = 0;
+        while (i < tweets.length) {
+            tweetstring = tweetstring + "<p>" + tweets[i] + "</p>";
+            i++;
+        }
+        document.getElementById("tweets").innerHTML = tweetstring;
+    </script>
+</body>
+
+</html>

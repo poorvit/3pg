@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>What is the magic work</p>
+    <input type="text" id="magic">
+    <p><button id="check">Enter</button></p>
+    <script type="text/javascript">
+        // var x = 5;
+        // if(x==1)
+        // {
+        //     alert("hurray!!!!");
+        // }
+        // else 
+        // {
+        //     alert("duh!!!!");
+        // }
+            document.getElementById("check").onclick=function()
+            {
+                var magic=document.getElementById("magic").value;
+                var magicword="asshole";
+                if(magic == magicword)
+                {
+                    alert("You got it!!");
+                }
+                else 
+                {
+                    alert("Nope try again!");
+                }
+            }
+    </script>
+</body>
+</html>
