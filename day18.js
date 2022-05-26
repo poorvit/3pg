@@ -124,25 +124,44 @@
 //     console.log(err)
 // });
 // console.log("Other application work!");
+const cont=document.querySelector('#country');
+const mybutton=document.querySelector('#button')
+function display(item){
+  const card= document.createElement('div');
+  card.classList.add('card');
+  const name= document.createElement('h1');
+  name.innerHTML=item.name;
+  const capital= document.createElement('h3');
+  capital.innerhtml=item.capital;
+  const language= document.createElement('h4');
+  language.innerhtml=item.language;
+  const population= document.createElement('h4');
+  population.innerHTML=item.population
+  const area= document.createElement('h4');
+  area.innerHTML=item.area;
+  
+  card.appendChild(name);
+  card.appendChild(capital);
+  card.appendChild(population);
+  card.appendChild(language);
+  card.appendChild(area);
+  cont.appendChild(card);
+}
+function content(data){
+  data.forEach((item) => {
+      display(item);
+  });
+}
 
-
-const url = 'https://restcountries.com/v2/all' // countries api
-fetch(url)
+ // countries api
+mybutton.addEventListener('click',function(){
+  fetch('https://restcountries.com/v2/all')
   .then(response => response.json()) // accessing the API data as JSON
     .then(data => {
     // getting the data
-    console.log(data)
+    content(data)
 })
-  .catch(error => console.error(error)) // handling error if something wrong happens
+});
 
-async function Audit(){
-    try{
-        const response = await fetch(url);
-        const countries =  await response.json();
-        console.log(countries);
-    }catch(err){
-        console.log(err)
-    }
-}
 
-Audit();
+

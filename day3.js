@@ -30,17 +30,18 @@
 //     console.log(`I am ${myage-age} years older than you`);
 // }
 
-let day=prompt("enter the day");
-if(day.match(/saturday/i))
-{
-    console.log("it's a weekend")
-}
-else if(day.match(/sunday/i))
-{
-    console.log("it's a weekend")
-}
-else
-{
-    console.log("its a weekday");
-}
-
+// let day=prompt("enter the day");
+// if(day.match(/saturday/i))
+// {
+//     console.log("it's a weekend")
+// }
+// else if(day.match(/sunday/i))
+// {
+//     console.log("it's a weekend")
+// }
+// else
+// {
+//     console.log("its a weekday");
+// }
+const year = document.querySelector('#year');
+year.style.color='red';

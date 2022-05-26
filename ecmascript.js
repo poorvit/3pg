@@ -61,3 +61,42 @@ const messege=`hello ${name}
 
 how are you`;
 console.log(messege);
+
+//spread ... main use to clone array or object
+const lang =['c','java','c++'];
+const newlang=['typescript',...lang]; //spread + your data
+console.log(newlang);
+
+
+const settings={
+    volumn:10,
+    brightness:80,
+};
+
+//const newsettings= settings //passby refernce same address
+
+const newsettings={...settings,volume:20} //shallow copy and it overrides the volume
+
+console.log(newsettings===settings) //it returns true
+
+
+//rest  same three dots ... but it is usd with thw functions
+const addItems = (...items) => {
+    console.log(items);
+};
+
+addItems(3, 2, 4, 10, 30);
+
+//for of loop
+
+const person={
+    name:'abc',
+    age:90,
+    city:'jhansi'
+}
+
+for(const entries  of Object.entries(person)){
+    console.log(entries);
+}
+
+//promises
