@@ -1,36 +1,24 @@
-var tabs= document.querySelectorAll(".lboard_tabs ul li")
-var today=document.querySelector(".today")
-var month=document.querySelector(".month")
-var year=document.querySelector(".year")
-var items=document.querySelector(".lboard_item")
+const lb= document.querySelector('.board');
+const ap= document.querySelector('.btn');
 
-tabs.forEach(function(tab)
-{
-    tab.addEventListener("click",function()
-    {
-        var dl=tab.getAttribute("data-li");
-        tabs.forEach(function(tab)
-        {
-            tab.classList.remove("active");
-        })
-        tab.classList.add("active");
+ap.addEventListener('click',()=>{
+    const Firstname=document.querySelector('#First').value;
+    const Lastname=document.querySelector('#Last').value;
+    const Country=document.querySelector('#Country').value;
+    const Score=document.querySelector('#Score').value;
 
-        items.forEach(function(item)
-        {
-            item.style.display="none"
-        })
-        if(dl=="today")
-        {
-            today.style.display="block";
-        }
-        else if(dl=="month")
-        {
-            month.style.display="block";
-        }
-        else if(dl=="year")
-        {
-            year.style.display="block";
-        }
-    })
-})
+    // const card=document.createElement('div');
+    // card.classList.add('card');
 
+    const list = document.createElement('div');
+    list.classList.add('list');
+
+    const task=document.createElement('input');
+    task.classList.add('task');
+    task.value=Firstname+" "+Lastname+" "+Country+" "+Score;
+    // task.value=Lastname;
+    // task.value=Country;
+    task.setAttribute('readonly','true');
+    list.appendChild(task);
+    lb.appendChild(list);
+});
